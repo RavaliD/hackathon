@@ -216,12 +216,12 @@
                         <li><a class="nav-link active" style="background:#fff;color:#000;" href="signup.html">Sign Up/Login</a></li>
                     </ul>
                 </div>
-                <div class="search-box">
+                <!--<div class="search-box">
                     <input type="" class="search-txt" placeholder="Search">
                     <a class="search-btn">
                         <img src="images/search_icon.png" alt="#" />
                     </a>
-                </div>
+                </div>-->
             </div>
         </nav>
     </header>
@@ -440,7 +440,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <strong>location</strong>
-                                    <input type="text" class="form-control" id="location" name="location" placeholder="Your location" required data-error="Please enter your location">
+                                    <input type="text" class="form-control" id="slocation" name="slocation" placeholder="Your location" required data-error="Please enter your location">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -558,7 +558,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="full icon text_align_center">
-                                <img src="images/social1.png">
+                                <img src="images/footer_logo.png">
                             </div>
                             <div class="full white_fonts text_align_center">
                                 <p>
@@ -568,13 +568,12 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="full icon text_align_center">
+                            <div class="full icon text_align_cen    ter">
                                 <img src="images/social2.png">
                             </div>
                             <div class="full white_fonts text_align_center">
                                 <p>
-                                    seniorcitizen@gmail.com<br>
-                                    volunteer@gmail.com
+                                    virago.bytes@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -584,8 +583,8 @@
                             </div>
                             <div class="full white_fonts text_align_center">
                                 <p>
-                                    +7586656566<br>
-                                    +7586656566
+                                    +919096278798<br>
+                                    +919949509477
                                 </p>
                             </div>
                         </div>
@@ -648,7 +647,20 @@
 
             };
 
-            alert(JSON.stringify(sdata));
+            $.ajax({
+                type: "POST",
+                url: "https://pyapp-thankful-bongo-te.eu-gb.mybluemix.net/voloservices/seniors",
+                dataType: "json",
+                contentType: "application/json; charset=UTF-8",
+                processData: false,
+                data: JSON.stringify(sdata),
+                success: function (result) {
+                    alert("Success");
+                },
+                error: function (e) {
+                    alert("Error");
+                }
+            });
         });
     </script>
     <script>
@@ -657,6 +669,46 @@
         var time = today.getHours() + "" + today.getMinutes() + "" + today.getSeconds();
         var dateTime = date + '' + time;
         $('#seniorprofileId').val(dateTime);
+    </script>
+    <script>
+        $(document).on('click', '#btnvol', function () {
+            var vdata = {
+
+                "volunteerId": $("#volunteerId").val(),
+                "firstName": $("#vfirstName").val(),
+                "lastName": $("#vlastName").val(),
+                "mobileNo": $("#vmobileNo").val(),
+                "address": $("#vaddress").val(),
+                "pincode": $("#vpincode").val(),
+                "emailid": $("#vemailid").val(),
+                "location": $("#vlocation").val(),
+                "serviceopted": $("#vserviceopted").val(),
+                "serving": $("#vserving").val(),
+                "comments": $("#vcomments").val()
+            };
+            //alert(JSON.stringify(vdata));
+            $.ajax({
+                type: "POST",
+                url: "http://pyapp-thankful-bongo-te.eu-gb.mybluemix.net/voloservices/volunteers",
+                dataType: "json",
+                contentType: "application/json; charset=UTF-8",
+                processData: false,
+                data: JSON.stringify(vdata),
+                success: function (result) {
+                    alert("Success");
+                },
+                error: function (e) {
+                    alert("Error");
+                }
+            });
+        });
+    </script>
+    <script>
+        var today = new Date();
+        var date = today.getFullYear() + '' + (today.getMonth() + 1) + '' + today.getDate();
+        var time = today.getHours() + "" + today.getMinutes() + "" + today.getSeconds();
+        var dateTime = date + '' + time;
+        $('#volunteerId').val(dateTime);
     </script>
 </body>
 </html>

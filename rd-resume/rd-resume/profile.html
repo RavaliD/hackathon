@@ -33,14 +33,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style>
- h2{
-	background-color: #0892fd;
-    padding: 10px;
-    color: #023671;
-    text-shadow: 1px 2px #a2b5dc;
-						}
- </style>
+
 </head>
 <body id="contact_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
@@ -71,149 +64,246 @@
                         <li><a class="nav-link active" style="background:#fff;color:#000;" href="signup.html">Sign Up/Login</a></li>
                     </ul>
                 </div>
-                <!--<div class="search-box">
+                <div class="search-box">
                     <input type="text" class="search-txt" placeholder="Search">
                     <a class="search-btn">
                         <img src="images/search_icon.png" alt="#" />
                     </a>
-                </div>-->
+                </div>
             </div>
         </nav>
     </header>
     <!-- End header -->
- 
-  	
-	
- <div class="container">
-	<form METHOD=GET ACTION="something">
-        <div class="row">
-            <div class="col-md-12" style="text-align:left;margin:1% 1.2%; ">
-                <h2>Profile Information</h2>
-				            </div>
-			    </div>
-	<form>
+    <!-- section -->
+    <!-- <div class="innerpage_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Register with us</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- end section -->
+    <!-- section -->
+    <div id="contact" class="contact-box">
+        <table align="center" style="margin: 0px auto;">
+            <tr>
+                <td>
+                    <div class="container">
 
+                        <div class="row">
 
-
-
-		          <div class="container" id="onebn">
-
+                            <div class="col-lg-7 col-sm-7 col-xs-12">
                                 <div class="contact-block">
                                     <form id="contactForm">
                                         <div class="row">
-                                          
+                                            <h2>Profile Information</h2>
 
-                                            <div class="col-md-4">
- 
-                                                <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group" align="center">
                                                     <strong>Profile Id</strong>
-                                                    <input type="text" placeholder="Profile Id" id="Id" class="form-control" name="Id">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-											
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <strong>First Name</strong>
-                                                    <input type="text" class="form-control" id="name" name="name" placeholder="from database">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <strong>Last Name</strong>
-                                                    <input type="text" placeholder="from database" id="name" class="form-control" name="name">
+                                                    <input type="text" placeholder="from database" id="Id" class="form-control" name="Id">
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group">
+                                                <div class="form-group" align="center">
+                                                    <strong>First Name</strong>
+                                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="from database">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group" align="center">
+                                                    <strong>Last Name</strong>
+                                                    <input type="text" placeholder="from database" id="lastname" class="form-control" name="lastname">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group" align="center">
                                                     <strong>MobileNumber</strong>
                                                     <input type="text" placeholder="from database" id="mobilenumber" class="form-control" name="mobilenumber">
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
-											
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <strong>EmailId</strong>
-                                                    <input type="text" placeholder="from database" id="emailid" class="form-control" name="emailid">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-											
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group" align="center">
                                                     <strong>Address</strong>
                                                     <textarea class="form-control" id="address" placeholder="from database" rows="5"></textarea>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
-	
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group" align="center">
+                                                    <strong>EmailId</strong>
+                                                    <input type="text" placeholder="from database" id="emailid" class="form-control" name="emailid">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group" align="center">
                                                         <strong>Comments</strong>
                                                         <textarea class="form-control" id="comments" placeholder="from database" rows="5"></textarea>
                                                         <div class="help-block with-errors"></div>
                                                     </div>
+
+                                                    <div class="submit-button text-center">
+                                                        <input class="btn btn-common" type="button" id="btnget" value="Get Details" /><br />
+                                                        <div id="message"></div>
+                                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
                                                 </div>
-                         	
-											  <div class="col-md-12">
-                                            <div class="submit-button text-center">
-                                                <button class="btn btn-common" id="submit" type="submit">Register</button>
-                                                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                                <div class="clearfix"></div>
                                             </div>
-											   </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <!--<div class="col-lg-5 col-sm-5 col-xs-12">
+                                <div class="left-contact">
+                                    <div class="media cont-line">
+                                        <div class="media-left icon-b">
+                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
                                         </div>
+                                        <div class="media-body dit-right">
+                                            <h4>Address</h4>
+                                            <p>Genpact</p>
+                                        </div>
+                                    </div>
+                                    <div class="media cont-line">
+                                        <div class="media-left icon-b">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body dit-right">
+                                            <h4>Email</h4>
+                                            <a href="#">angana.saha@genpact.com</a><br>
+                                            <a href="#">ravali.durgam@genpact.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="media cont-line">
+                                        <div class="media-left icon-b">
+                                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body dit-right">
+                                            <h4>Phone Number</h4>
+                                            <a href="#">12345 67890</a><br>
+                                            <a href="#">12345 67890</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+
+                        </div>
+                    </div>
+                </td>
+                <!--<td>
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-lg-7 col-sm-7 col-xs-12">
+                                <div class="contact-block">
+                                    <form id="contactForm">
+                                        <div class="row">
+                                            <h2>Senior Citizen Registration Form</h2>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Your number" id="number" class="form-control" name="number" required data-error="Please enter your number">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="address" placeholder="Your Address" rows="8" data-error="Write your address" required></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="submit-button text-center">
+                                                    <button class="btn btn-common" id="submit" type="submit">Register</button>
+                                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
-                             
-                          
+                                </div>
+                            </div>-->
+                <!--<div class="col-lg-5 col-sm-5 col-xs-12">
+                    <div class="left-contact">
+                        <div class="media cont-line">
+                            <div class="media-left icon-b">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body dit-right">
+                                <h4>Address</h4>
+                                <p>Genpact</p>
+                            </div>
+                        </div>
+                        <div class="media cont-line">
+                            <div class="media-left icon-b">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body dit-right">
+                                <h4>Email</h4>
+                                <a href="#">angana.saha@genpact.com</a><br>
+                                <a href="#">ravali.durgam@genpact.com</a>
+                            </div>
+                        </div>
+                        <div class="media cont-line">
+                            <div class="media-left icon-b">
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body dit-right">
+                                <h4>Phone Number</h4>
+                                <a href="#">12345 67890</a><br>
+                                <a href="#">12345 67890</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
 
-
-
-                        </div>	
-					
-
-
-      
-
-
-
-
-         </div>
 
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script>
-        $(document).on('click', '#Register', function () {
-            $.ajax({
-                type: "GET",
-                url: "https://restcountries.eu/rest/v2/callingcode/91", ----bY JP
-                        dataType: "json",
-                success: function (result, status, xhr) {
-                    for (i = 0; i < result.length; i++) {
-                        var x = JSON.stringify(result[i]);
-                        alert(JSON.parse(x).Profile Id);
-                        alert(JSON.parse(x).First Name)
-                        alert(JSON.parse(x).Last Name)
-                        alert(JSON.parse(x).MobileNumber)
-                        alert(JSON.parse(x).Address)
-                        alert(JSON.parse(x).EmailId)
-                        alert(JSON.parse(x).Comments)
-                    };
-                },
-                error: function (xhr, status, error) {
-                    alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr
-                        .statusText)
-                }
-                    });
-                });
-    </script>
-        <!-- end section -->
+    </div>
+    </td>
+    </tr>
+    </table>
+
+    </div>
+
+    <!-- end section -->
     <!-- Start Footer -->
-   
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    </style>
     <footer class="footer-box">
         <div class="container">
             <div class="row">
@@ -255,7 +345,7 @@
                 </div>
 
             </div>
-            <!--<div class="row white_fonts margin-top_30">
+            <div class="row white_fonts margin-top_30">
                 <div class="col-lg-12">
                     <div class="full">
                         <div class="center">
@@ -268,11 +358,21 @@
                         </div>
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
     </footer>
     <!-- End Footer -->
-   
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    </style>
     <div class="footer_bottom">
         <div class="container">
             <div class="row">
@@ -306,5 +406,28 @@
     <script src="js/isotope.min.js"></script>
     <script src="js/images-loded.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        $(document).on('click', '#btnget', function () {
+            $.ajax({
+                type: "GET",
+                url: "https://pyapp-thankful-bongo-te.eu-gb.mybluemix.net/voloservices/seniors/11041",
+                dataType: "json",
+                success: function (result, status, xhr) {
+                    var x = JSON.stringify(result);
+                    $('#Id').val(JSON.parse(x).seniorprofileId);
+                    $('#firstname').val(JSON.parse(x).firstName);
+                    $('#lastname').val(JSON.parse(x).lastname);
+                    $('#mobilenumber').val(JSON.parse(x).mobileno);
+                    $('#address').val(JSON.parse(x).address);
+                    $('#emailid').val(JSON.parse(x).emailid);
+                    $('#comments').val("needhelp");
+                    $('#message').innerText = "Success";
+                },
+                error: function (xhr, status, error) {
+                    $('#message').innerText = "Error";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
