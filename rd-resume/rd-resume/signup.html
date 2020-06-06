@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Volunteer</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="css/pogo-slider.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #07528d;
+            color: white;
+            padding: 5px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 0px 0 12px 0;
+            position: relative;
+            border-radius: .3rem .3rem;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 60%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        h2 {
+            background-color: #0892fd;
+            padding: 10px;
+            color: #023671;
+            text-shadow: 1px 2px #a2b5dc;
+        }
+    </style>
+
+
+    <script>
+        function show1() {
+            document.getElementById('multibn').style.display = 'none';
+            document.getElementById('onebn').style.display = 'block';
+        }
+        function show2() {
+            document.getElementById('multibn').style.display = 'block';
+            document.getElementById('onebn').style.display = 'none';
+        }
+    </script>
+</head>
+<body id="contact_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/loader.gif" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/volo.png" alt="image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="requestform.html">Service Request</a></li>
+                        <li><a class="nav-link" href="profile.html">Profile</a></li>
+                        <li><a class="nav-link" href="service.html">Request Tracking</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li><a class="nav-link active" style="background:#fff;color:#000;" href="signup.html">Sign Up/Login</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                        <img src="images/search_icon.png" alt="#" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- End header -->
+    <!-- section -->
+    <!--<div class="innerpage_banner">-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" style="text-align:left">
+                <input style="margin-left:10%" type="radio" class="bn2" name="bn" value="1" checked="checked" onclick="show1();" /> Volunteer Signup
+            </div>
+            <div class="col-md-4" style="text-align:left">
+                <input style="margin-left:20%" type="radio" class="bn3" name="bn" value="2" onclick="show2();" /> Senior Citizen Signup
+            </div>
+            <div class="col-md-4" style="text-align:left">
+                <h3>Already have account ? <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></h3>
+
+            </div>
+        </div>
+        <div class="container" id="onebn">
+
+            <div class="contact-block">
+                <form id="contactForm">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <h2>Volunteer Registration Form</h2>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>volunteerId</strong>
+                                <input type="text" class="form-control" id="volunteerId" name="volunteerId" placeholder="Your Name" required data-error="Please enter your name">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>firstName</strong>
+                                <input type="text" class="form-control" id="vfirstName" name="vfirstName" placeholder="Your firstName" required data-error="Please enter your firstName">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>lastName</strong>
+                                <input type="text" class="form-control" id="vlastName" name="vlastName" placeholder="Your firstName" required data-error="Please enter your firstName">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>mobileNo</strong>
+                                <input type="text" class="form-control" id="vmobileNo" name="vmobileNo" placeholder="Your mobileNo" required data-error="Please enter your mobileNo">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>address</strong>
+                                <input type="text" class="form-control" id="vaddress" name="vaddress" placeholder="Your address" required data-error="Please enter your address">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>pincode</strong>
+                                <input type="text" class="form-control" id="vpincode" name="vpincode" placeholder="Your pincode" required data-error="Please enter your pincode">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>location</strong>
+                                <input type="text" class="form-control" id="vlocation" name="vlocation" placeholder="Your location" required data-error="Please enter your location">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>lat</strong>
+                                <input type="text" class="form-control" id="vlat" name="vlat" placeholder="Your location" required data-error="Please enter your location">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>lon</strong>
+                                <input type="text" class="form-control" id="vlon" name="vlon" placeholder="Your location" required data-error="Please enter your location">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>serviceopted</strong>
+                                <input type="text" class="form-control" id="vserviceopted" name="vserviceopted" placeholder="Your serviceopted" required data-error="Please enter your serviceopted">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>serving</strong>
+                                <input type="text" class="form-control" id="vserving" name="vserving" placeholder="Your serving" required data-error="Please enter your serving">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>comments</strong>
+                                <input type="text" class="form-control" id="vcomments" name="vcomments" placeholder="Your comments" required data-error="Please enter your comments">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>emailid</strong>
+                                <input type="text" class="form-control" id="vemailid" name="vemailid" placeholder="Your emailid" required data-error="Please enter your emailid">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="submit-button text-center">
+                                <!--<button class="btn btn-common" id="submit" type="submit">Register</button>-->
+                                <input class="btn btn-common" type="button" id="btnvol" value="Register" />
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </form>
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div class="container" id="multibn" style="display:none">
+
+            <div class="row">
+
+
+                <div class="contact-block">
+                    <form id="contactForm">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <h2>Senior Citizen Registration Form</h2>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>seniorprofileId</strong>
+                                    <input type="text" class="form-control" id="seniorprofileId" name="seniorprofileId" placeholder="Your comments" required data-error="Please enter your comments">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>firstName</strong>
+                                    <input type="text" class="form-control" id="sfirstName" name="sfirstName" placeholder="Your firstName" required data-error="Please enter your firstName">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>lastname</strong>
+                                    <input type="text" class="form-control" id="slastname" name="slastname" placeholder="Your lastname" required data-error="Please enter your lastname">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>mobileno</strong>
+                                    <input type="text" class="form-control" id="smobileno" name="smobileno" placeholder="Your mobileno" required data-error="Please enter your mobileno">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>address</strong>
+                                    <input type="text" class="form-control" id="saddress" name="saddress" placeholder="Your address" required data-error="Please enter your address">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>pincode</strong>
+                                    <input type="text" class="form-control" id="spincode" name="spincode" placeholder="Your pincode" required data-error="Please enter your pincode">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>emailid</strong>
+                                    <input type="text" class="form-control" id="semailid" name="semailid" placeholder="Your emailid" required data-error="Please enter your emailid">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>location</strong>
+                                    <input type="text" class="form-control" id="location" name="location" placeholder="Your location" required data-error="Please enter your location">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>lat</strong>
+                                    <input type="text" class="form-control" id="slat" name="slat" placeholder="Your pincode" required data-error="Please enter your pincode">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>lon</strong>
+                                    <input type="text" class="form-control" id="slon" name="slon" placeholder="Your pincode" required data-error="Please enter your pincode">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="submit-button text-center">
+                                    <input class="btn btn-common" type="button" id="btnsen" value="Register" />
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                </div>
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- end section -->
+        <!-- section -->
+        <div id="contact" class="contact-box">
+
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <h2>Sign In</h2>
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <!--<div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>-->
+                </form>
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <!-- end section -->
+    <!-- Start Footer -->
+    <footer class="footer-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
+                        <a href="index.html">
+                            <!--<img src="images/contact.png" alt="#" />-->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12 white_fonts">
+                    <h4 class="text-align">Contact Us</h4>
+                </div>
+                <div class="margin-top_30 col-md-8 offset-md-2 white_fonts">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="images/social1.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>
+                                    Genpact<br>
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="images/social2.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>
+                                    seniorcitizen@gmail.com<br>
+                                    volunteer@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="images/social3.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>
+                                    +7586656566<br>
+                                    +7586656566
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp">© 2020 All Rights Reserved.</p>
+                    <ul class="bottom_menu">
+                        <!--<li><a href="#">About Us</a></li>
+                        <li><a href="#">Find jobs</a></li>-->
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/slider-index.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).on('click', '#btnsen', function () {
+            var sdata = {
+
+                "seniorprofileId": $("#seniorprofileId").val(),
+                "firstName": $("#sfirstName").val(),
+                "lastname": $("#slastname").val(),
+                "mobileno": $("#smobileno").val(),
+                "address": $("#saddress").val(),
+                "pincode": $("#spincode").val(),
+                "emailid": $("#semailid").val(),
+                "location": $("#slocation").val(),
+                "lat": $("#slat").val(),
+                "lon": $("#slon").val()
+
+            };
+
+            alert(JSON.stringify(sdata));
+        });
+    </script>
+    <script>
+        var today = new Date();
+        var date = today.getFullYear() + '' + (today.getMonth() + 1) + '' + today.getDate();
+        var time = today.getHours() + "" + today.getMinutes() + "" + today.getSeconds();
+        var dateTime = date + '' + time;
+        $('#seniorprofileId').val(dateTime);
+    </script>
+</body>
+</html>
+
+
