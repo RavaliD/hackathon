@@ -11,10 +11,10 @@ import atexit, json
 app = Flask(__name__)
 
 
-
-serviceUsername = "5d8d6fdb-f52d-4c49-a2b9-96abec2ccd5b-bluemix"
-servicePassword = "d3cf2de4073414037226e55ab9302211f434348ae453a221d4b8ce04f2789bca"
-serviceURL = "https://5d8d6fdb-f52d-4c49-a2b9-96abec2ccd5b-bluemix:d3cf2de4073414037226e55ab9302211f434348ae453a221d4b8ce04f2789bca@5d8d6fdb-f52d-4c49-a2b9-96abec2ccd5b-bluemix.cloudantnosqldb.appdomain.cloud"
+# Values to be updated during deployment
+serviceUsername = ""
+servicePassword = ""
+serviceURL = ""
 
 client = Cloudant(serviceUsername, servicePassword, url=serviceURL)
 client.connect()
